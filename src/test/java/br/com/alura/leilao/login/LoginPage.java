@@ -6,22 +6,19 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import br.com.alura.leilao.PageObject;
 import br.com.alura.leilao.leiloes.LeiloesPage;
 import junit.framework.Assert;
 
-public class LoginPage {
+public class LoginPage extends PageObject{
 	
 	private static final String URL_LOGIN = "http://localhost:8080/login";
-	private WebDriver browser;	
-	
+		
 	public LoginPage() {
+		super(null);
 		//Abrir o navegador, passar a URL e fechar o navegador
-		this.browser = new ChromeDriver();
+		
 		browser.navigate().to(URL_LOGIN);
-	}
-
-	public void fechar() {
-		this.browser.quit();
 		
 	}
 	

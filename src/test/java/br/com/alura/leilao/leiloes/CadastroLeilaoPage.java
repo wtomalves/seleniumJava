@@ -14,12 +14,7 @@ public class CadastroLeilaoPage extends PageObject {
 	
 	public CadastroLeilaoPage(WebDriver browser) {
 		//Abrir o navegador, passar a URL e fechar o navegador
-		this.browser = browser;
-		
-	}
-
-	public void fechar() {
-		this.browser.quit();
+		super(browser);
 	}
 
 	public LeiloesPage cadastrarLeilao(String nome, String valorInicial, String dataAbertura) {
